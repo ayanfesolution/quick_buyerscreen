@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:quick_buyerscreen/getting_started.dart';
+import 'package:quick_buyerscreen/how_it_work.dart';
 import 'package:quick_buyerscreen/installment.dart';
 import 'package:quick_buyerscreen/privacy_policy.dart';
+import 'package:quick_buyerscreen/return_and_refund.dart';
 import 'package:quick_buyerscreen/term_of_use.dart';
 
 import 'setup_wallet.dart';
+import 'shipping.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const PrivacyPolicyInfo(),
+      home: const HowItWorkInfo(),
     );
   }
 }

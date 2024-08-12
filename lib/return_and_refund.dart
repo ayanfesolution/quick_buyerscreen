@@ -6,8 +6,8 @@ class ReturnAndRefund extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
-      appBar: quickInfoAppBar(),
+    return Scaffold(
+      appBar: quickInfoAppBar(context),
       body: const Padding(
         padding: EdgeInsets.symmetric(
           horizontal: 36,
@@ -16,8 +16,18 @@ class ReturnAndRefund extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              MainHeadingText(text: 'Setup wallet'),
+              MainHeadingText(text: 'Returns and Refunds'),
               SizedBox(height: 14),
+              BulletPiontText(
+                  text:
+                      'Return Policy: Return and refunds are governed by the policies of the individual sellers, please review the return and refund policy of the seller before making a purchase.'),
+              SizedBox(
+                height: 18,
+              ),
+              BulletPiontText(
+                text:
+                    'Return Policy: Return and refunds are governed by the policies of the individual sellers, please review the return and refund policy of the seller before making a purchase.   Procedure: To initiate a return, you must contact the seller directly through the App. The seller will provide instructions on how to return the product.',
+              ),
             ],
           ),
         ),

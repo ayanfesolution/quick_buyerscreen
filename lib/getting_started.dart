@@ -7,7 +7,7 @@ class GettingStartedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: quickInfoAppBar(),
+      appBar: quickInfoAppBar(context),
       body: const Padding(
         padding: EdgeInsets.symmetric(
           horizontal: 36,

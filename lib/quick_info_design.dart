@@ -1,32 +1,33 @@
- 
- 
- 
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-AppBar quickInfoAppBar() {
-    return AppBar(
-      leading: Padding(
-        padding: const EdgeInsets.all(16.0),
+AppBar quickInfoAppBar(BuildContext context) {
+  return AppBar(
+    leading: Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: InkWell(
+        onTap: () {
+          Navigator.pop(context);
+        },
         child: SizedBox(
           width: 24,
           height: 24,
           child: SvgPicture.asset('asset/x-close.svg'),
         ),
       ),
-      actions: [
-        SvgPicture.asset('asset/bell-02.svg'),
-        const SizedBox(
-          width: 14,
-        ),
-        SvgPicture.asset('asset/message-square-02.svg'),
-        const SizedBox(
-          width: 26,
-        ),
-      ],
-    );
-  }
-
+    ),
+    actions: [
+      SvgPicture.asset('asset/bell-02.svg'),
+      const SizedBox(
+        width: 14,
+      ),
+      SvgPicture.asset('asset/message-square-02.svg'),
+      const SizedBox(
+        width: 26,
+      ),
+    ],
+  );
+}
 
 class NormalText extends StatelessWidget {
   const NormalText({
